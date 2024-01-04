@@ -10,9 +10,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # Base Packages
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   dio: ^5.4.0
+  google_fonts: ^6.1.0
+  flutter_secure_storage: ^9.0.0
+  shared_preferences: ^2.2.2
+  # UI Packages
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +29,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icons/

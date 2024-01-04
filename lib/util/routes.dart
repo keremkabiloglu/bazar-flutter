@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 
+import '../screens/signin/controller/signin_binding.dart';
 import '../screens/signin/view/signin_screen.dart';
 
 class AppPages {
@@ -9,6 +10,7 @@ class AppPages {
     GetPage(
       name: SigninScreen.routeName,
       page: () => const SigninScreen(),
+      binding: SigninBinding(),
     ),
   ];
 }
