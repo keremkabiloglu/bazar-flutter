@@ -16,10 +16,10 @@ class ApiError {
       messages: json['message'] is List
           ? List<String>.from(
               (json['message'] ?? []).map(
-                (e) => '${e ?? 'UNKNOWN'}',
+                (e) => '${e ?? 'UNKNOWN_ERROR'}',
               ),
             )
-          : ['${json['message'] ?? 'UNKNOWN'}'],
+          : ['${json['message'] ?? 'UNKNOWN_ERROR'}'],
     );
   }
 }

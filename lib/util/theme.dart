@@ -3,6 +3,22 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static ThemeData get light => ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: Color(0xFF0A0A0A),
+          ),
+          titleTextStyle: TextStyle(
+            color: Color(0xFF0A0A0A),
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        scaffoldBackgroundColor: const Color(0xFFF6F6F6),
+        bottomSheetTheme: const BottomSheetThemeData(
+          backgroundColor: Colors.transparent,
+        ),
         useMaterial3: false,
         splashColor: Colors.transparent,
         fontFamily: GoogleFonts.roboto().fontFamily,
@@ -13,9 +29,7 @@ class AppTheme {
           onSecondary: Color(0xFFFFFFFF),
         ),
         inputDecorationTheme: InputDecorationTheme(
-          iconColor: const Color(0xff3b3b3b),
-          prefixIconColor: const Color(0xff3b3b3b),
-          suffixIconColor: const Color(0xff3b3b3b),
+          iconColor: Colors.black.withOpacity(0.25),
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 16,
             vertical: 12,

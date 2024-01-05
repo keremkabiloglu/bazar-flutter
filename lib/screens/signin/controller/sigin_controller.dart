@@ -2,7 +2,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../util/services/app_service/app_service.dart';
 import '../../../util/services/user_service/user_service.dart';
+import '../../main/view/main_screen.dart';
 import '../model/signin_request_dto.dart';
 import 'signin_repository.dart';
 
@@ -37,15 +39,12 @@ class SigninController extends GetxController {
       )
           .then((user) {
         if (user != null && user.authCookie != null) {
-          Get.snackbar(
-            'Sign In',
-            'Sign In Success',
-            snackPosition: SnackPosition.BOTTOM,
-            backgroundColor: Colors.green,
-            colorText: Colors.white,
-            margin: const EdgeInsets.all(16),
-            borderRadius: 12,
-            duration: const Duration(seconds: 2),
+          Get.offAllNamed(MainScreen.routeName);
+          Get.find<AppService>().showSuccess(
+            'WELCOME_@NAME'.trParams(
+              {'name': user.firstName},
+            ),
+            title: 'SIGIN_SUCCESS'.tr,
           );
         }
       });

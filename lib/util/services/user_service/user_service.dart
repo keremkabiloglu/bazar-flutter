@@ -21,11 +21,6 @@ class UserService extends GetxService {
     final cookie = await _readCookie();
     if (cookie != null) {
       await refreshUser(cookie);
-      if (user != null) {
-        WidgetsBinding.instance.addPostFrameCallback((_) async {
-          Get.find<AppService>().showError('Welcome back ${user?.firstName}');
-        });
-      }
     }
   }
 
