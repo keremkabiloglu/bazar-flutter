@@ -28,7 +28,7 @@ class AppBottomNavigationBar extends StatelessWidget {
       margin: EdgeInsets.only(
         left: 8,
         right: 8,
-        bottom: 12 + Get.mediaQuery.padding.bottom,
+        bottom: 8 + Get.mediaQuery.padding.bottom,
       ),
       width: double.infinity,
       height: 70,

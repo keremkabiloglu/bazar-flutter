@@ -28,6 +28,13 @@ class Turkish extends ILanguage {
         'MESSAGES': 'Mesajlar',
         'MY_ACCOUNT': 'Hesabım',
         'APPBAR_SEARCH_HINT': 'telefon, bilgisayar, elbise...',
+        'FLOW': 'Akış',
+        'FOLLOWING': 'Takip Edilenler',
+        'NEARBY': 'Yakındakiler',
+        'SPECIAL_FOR_YOU': 'Sana Özel',
+        'BRANDNEW': 'YENİ',
+        'LITTLEUSED': 'AZ KULLANILMIŞ',
+        'USED': 'KULLANILMIŞ',
       };
 
   @override

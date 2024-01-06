@@ -9,9 +9,9 @@ class MainScreenController extends GetxController {
 
   final List<Widget> _screens = const [
     HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    Placeholder(),
+    Placeholder(),
+    Placeholder(),
   ];
 
   int get selectedIndex => _selectedIndex.value;

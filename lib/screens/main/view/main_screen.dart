@@ -15,7 +15,9 @@ class MainScreen extends GetView<MainScreenController> {
       extendBody: true,
       appBar: const AppAppBar(),
       body: PageView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         controller: controller.pageController,
+        itemCount: controller.screens.length,
         itemBuilder: (context, index) => controller.screens[index],
       ),
       bottomSheet: AppBottomNavigationBar(

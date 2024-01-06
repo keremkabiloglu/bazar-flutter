@@ -1,5 +1,6 @@
-import 'package:bazar_flutter/util/services/api_service/api_service.dart';
 import 'package:dio/dio.dart';
+
+import '../api_service.dart';
 
 enum RequestType {
   get,

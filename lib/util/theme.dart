@@ -81,5 +81,20 @@ class AppTheme {
             highlightColor: Colors.transparent,
           ),
         ),
+        tabBarTheme: const TabBarTheme(
+          labelColor: Color(0xFF272728),
+          unselectedLabelColor: Color(0xFF868687),
+          labelStyle: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+          unselectedLabelStyle: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: Color(0xFF868687),
+          ),
+          indicator: BoxDecoration(),
+          labelPadding: EdgeInsets.all(6),
+        ),
       );
 }
