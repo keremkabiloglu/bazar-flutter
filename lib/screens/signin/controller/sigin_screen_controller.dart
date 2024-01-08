@@ -8,7 +8,7 @@ import '../../main/view/main_screen.dart';
 import '../model/signin_request_dto.dart';
 import 'signin_repository.dart';
 
-class SigninController extends GetxController {
+class SigninScreenController extends GetxController {
   final _repository = Get.find<SigninRepository>();
   final formKey = GlobalKey<FormState>();
   final emailController = TextEditingController();

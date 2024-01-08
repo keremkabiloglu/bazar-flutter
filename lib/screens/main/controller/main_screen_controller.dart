@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
+import '../../categories/view/categories_screen.dart';
 import '../../home/view/home_screen.dart';
 
 class MainScreenController extends GetxController {
@@ -9,7 +10,7 @@ class MainScreenController extends GetxController {
 
   final List<Widget> _screens = const [
     HomeScreen(),
-    Placeholder(),
+    CategoriesScreen(),
     Placeholder(),
     Placeholder(),
   ];

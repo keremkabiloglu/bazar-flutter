@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-import '../../controller/sigin_controller.dart';
+import '../../controller/sigin_screen_controller.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({super.key, required this.controller});
 
-  final SigninController controller;
+  final SigninScreenController controller;
 
   @override
   Widget build(BuildContext context) {

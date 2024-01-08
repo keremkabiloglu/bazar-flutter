@@ -35,6 +35,18 @@ class Turkish extends ILanguage {
         'BRANDNEW': 'YENİ',
         'LITTLEUSED': 'AZ KULLANILMIŞ',
         'USED': 'KULLANILMIŞ',
+        'PRICE_RANGE': 'Fiyat Aralığı',
+        'APPLY_FILTERS': 'Filtreleri Uygula',
+        'STATE': 'Durum',
+        'ALL': 'Tümü',
+        'DISTANCE': 'Mesafe',
+        'DELIVERY_METHOD': 'Teslimat Şekli',
+        'PICKUP': 'Alışveriş Yerinde Teslim',
+        'DELIVERY': 'Kargo İle Teslim',
+        'BRAND': 'Marka',
+        'CLOSE': 'Kapat',
+        'DEFAULT': 'Varsayılan',
+        'PRICE_LOW_TO_HIGH': 'Artan Fiyat',
       };
 
   @override

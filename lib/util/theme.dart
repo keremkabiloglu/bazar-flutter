@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'comonents/circle_thumb_shape.dart';
+import 'comonents/circle_thumb_shape_range.dart';
+import 'comonents/cirlce_tab_indicator.dart';
+import 'comonents/track_shape.dart';
+
 class AppTheme {
   static ThemeData get light => ThemeData(
         appBarTheme: const AppBarTheme(
@@ -69,6 +74,7 @@ class AppTheme {
               fontWeight: FontWeight.w300,
               color: Colors.black,
             ),
+            minimumSize: const Size(0, 0),
           ),
         ),
         iconButtonTheme: IconButtonThemeData(
@@ -81,20 +87,60 @@ class AppTheme {
             highlightColor: Colors.transparent,
           ),
         ),
-        tabBarTheme: const TabBarTheme(
-          labelColor: Color(0xFF272728),
-          unselectedLabelColor: Color(0xFF868687),
-          labelStyle: TextStyle(
+        tabBarTheme: TabBarTheme(
+          labelColor: const Color(0xFF272728),
+          unselectedLabelColor: const Color(0xFF868687),
+          labelStyle: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
-          unselectedLabelStyle: TextStyle(
+          unselectedLabelStyle: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
             color: Color(0xFF868687),
           ),
-          indicator: BoxDecoration(),
-          labelPadding: EdgeInsets.all(6),
+          indicator: CircleTabIndicator(
+            color: const Color(0xFF242424),
+            radius: 3.5,
+          ),
+          labelPadding: const EdgeInsets.symmetric(horizontal: 6, vertical: 12),
+        ),
+        sliderTheme: SliderThemeData(
+          activeTrackColor: const Color(0xFF242424),
+          inactiveTrackColor: const Color(0xFFE0E0E0),
+          thumbColor: const Color(0xFF242424),
+          overlayColor: const Color(0xFF242424).withOpacity(0.12),
+          trackHeight: 2,
+          valueIndicatorShape: const DropSliderValueIndicatorShape(),
+          thumbShape: const CircleThumbShape(thumbRadius: 12),
+          rangeThumbShape: const CircleThumbShapeRange(thumbRadius: 12),
+          trackShape: TrackShape(),
+        ),
+        radioTheme: RadioThemeData(
+          fillColor: MaterialStateProperty.all(const Color(0xFF242424)),
+        ),
+        expansionTileTheme: const ExpansionTileThemeData(
+          tilePadding: EdgeInsets.zero,
+          collapsedShape: RoundedRectangleBorder(),
+          shape: RoundedRectangleBorder(),
+        ),
+        checkboxTheme: CheckboxThemeData(
+          visualDensity: const VisualDensity(
+            vertical: -4,
+            horizontal: -4,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(6),
+          ),
+        ),
+        listTileTheme: const ListTileThemeData(
+          visualDensity: VisualDensity(vertical: -4, horizontal: -4),
+          contentPadding: EdgeInsets.zero,
+        ),
+        dialogTheme: DialogTheme(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
       );
 }

@@ -17,27 +17,27 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      automaticallyImplyLeading: false,
+      automaticallyImplyLeading: true,
+      titleSpacing: 0,
       title: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         child: Row(
           children: [
+            if (!Navigator.canPop(Get.context!))
+              const Expanded(
+                child: Text('BA\nZAR'),
+              ),
             Expanded(
-              child: Navigator.canPop(context)
-                  ? const BackButton()
-                  : const Text('BA\nZAR'),
-            ),
-            Expanded(
-              flex: Navigator.canPop(context) ? 8 : 6,
+              flex: 7,
               child: TextField(
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.search,
-                readOnly: !Navigator.canPop(context),
+                readOnly: onSearchChanged == null && onSearchSubmitted == null,
                 onSubmitted: onSearchSubmitted,
                 onChanged: onSearchChanged,
-                onTap: Navigator.canPop(context)
-                    ? null
-                    : () => Get.toNamed(SearchScreen.routeName),
+                onTap: (onSearchChanged == null && onSearchSubmitted == null)
+                    ? () => Get.toNamed(SearchScreen.routeName)
+                    : null,
                 decoration: InputDecoration(
                   hintText: 'APPBAR_SEARCH_HINT'.tr,
                   suffixIcon: const Icon(CupertinoIcons.search),

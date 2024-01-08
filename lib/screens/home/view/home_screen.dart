@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 
-import '../../../util/comonents/app_tabbar.dart';
 import '../../../util/comonents/product_grid_item.dart';
 import '../../../util/model/product_state.dart';
 import '../controller/home_screen_controller.dart';
@@ -13,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeScreenController>(
-      init: Get.put(HomeScreenController()),
+      init: HomeScreenController(),
       autoRemove: false,
       global: false,
       builder: (controller) {
@@ -21,29 +20,33 @@ class HomeScreen extends StatelessWidget {
           children: [
             Obx(
               () {
-                return AnimatedSize(
-                  duration: const Duration(milliseconds: 100),
-                  curve: Curves.easeInOut,
-                  child: SizedBox(
-                    height: controller.showTabBar.value ? 48 : 0,
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 8),
-                            child: AppTabBar(
-                              controller: controller.tabControleller,
-                              onTap: controller.onTabPressed,
-                              isScrollable: true,
-                              tabs: [
-                                Text('FLOW'.tr),
-                                Text('FOLLOWING'.tr),
-                                Text('NEARBY'.tr),
-                                Text('SPECIAL_FOR_YOU'.tr),
-                              ],
+                return AnimatedOpacity(
+                  duration: const Duration(milliseconds: 200),
+                  opacity: controller.showTabBar.value ? 1 : 0,
+                  child: AnimatedSize(
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                    child: SizedBox(
+                      height: controller.showTabBar.value ? 48 : 0,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 8),
+                              child: TabBar(
+                                controller: controller.tabControleller,
+                                onTap: controller.onTabPressed,
+                                isScrollable: true,
+                                tabs: [
+                                  Text('FLOW'.tr),
+                                  Text('FOLLOWING'.tr),
+                                  Text('NEARBY'.tr),
+                                  Text('SPECIAL_FOR_YOU'.tr),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),

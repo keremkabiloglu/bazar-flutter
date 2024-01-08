@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../controller/sigin_controller.dart';
+import '../controller/sigin_screen_controller.dart';
 import 'components/signin_form.dart';
 
-class SigninScreen extends GetView<SigninController> {
+class SigninScreen extends GetView<SigninScreenController> {
   static const String routeName = '/signin';
 
   const SigninScreen({super.key});
