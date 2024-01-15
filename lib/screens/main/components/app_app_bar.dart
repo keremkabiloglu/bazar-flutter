@@ -17,16 +17,21 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      automaticallyImplyLeading: true,
       titleSpacing: 0,
+      automaticallyImplyLeading: false,
       title: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         child: Row(
           children: [
-            if (!Navigator.canPop(Get.context!))
+            if (!Navigator.canPop(context))
               const Expanded(
-                child: Text('BA\nZAR'),
-              ),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 4),
+                  child: Text('BA\nZAR'),
+                ),
+              )
+            else
+              const BackButton(),
             Expanded(
               flex: 7,
               child: TextField(

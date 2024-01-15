@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 class HomeScreenController extends GetxController
     with GetSingleTickerProviderStateMixin {
-  late final TabController tabControleller;
+  late final TabController tabController;
 
   final tabViewScrollControllers = <ScrollController>[];
   final showTabBar = Rx<bool>(true);
@@ -24,11 +24,11 @@ class HomeScreenController extends GetxController
 
   @override
   void onInit() {
-    tabControleller = TabController(
+    tabController = TabController(
       length: 4,
       vsync: this,
     );
-    for (var i = 0; i < tabControleller.length; i++) {
+    for (var i = 0; i < tabController.length; i++) {
       tabViewScrollControllers.add(ScrollController());
       _addHideListener(tabViewScrollControllers[i]);
     }

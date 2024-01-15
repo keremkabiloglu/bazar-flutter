@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 import '../../categories/view/categories_screen.dart';
 import '../../home/view/home_screen.dart';
+import '../../messages/view/messages_screen.dart';
+import '../../profile/view/profile_screen.dart';
 
 class MainScreenController extends GetxController {
   final _selectedIndex = 0.obs;
@@ -11,8 +13,8 @@ class MainScreenController extends GetxController {
   final List<Widget> _screens = const [
     HomeScreen(),
     CategoriesScreen(),
-    Placeholder(),
-    Placeholder(),
+    MessagesScreen(),
+    ProfileScreen()
   ];
 
   int get selectedIndex => _selectedIndex.value;

@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(bottom: 8),
                               child: TabBar(
-                                controller: controller.tabControleller,
+                                controller: controller.tabController,
                                 onTap: controller.onTabPressed,
                                 isScrollable: true,
                                 tabs: [
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
             ),
             Expanded(
               child: TabBarView(
-                controller: controller.tabControleller,
+                controller: controller.tabController,
                 children: [
                   for (int i = 0; i < 4; i++)
                     SingleChildScrollView(

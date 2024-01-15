@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'comonents/circle_thumb_shape.dart';
 import 'comonents/circle_thumb_shape_range.dart';
@@ -26,7 +25,7 @@ class AppTheme {
         ),
         useMaterial3: false,
         splashColor: Colors.transparent,
-        fontFamily: GoogleFonts.roboto().fontFamily,
+        fontFamily: 'HeyWow',
         colorScheme: const ColorScheme.light(
           primary: Color(0xFF0A0A0A),
           secondary: Color(0xFF0A0A0A),

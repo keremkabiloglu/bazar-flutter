@@ -16,7 +16,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   dio: ^5.4.0
-  google_fonts: ^6.1.0
   flutter_secure_storage: ^9.0.0
   shared_preferences: ^2.2.2
   # UI Packages
@@ -33,3 +32,20 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icons/
+  fonts:
+    - family: HeyWow
+      fonts:
+        - asset: assets/fonts/HeyWow/HeyWowBold.ttf
+          weight: 700
+        - asset: assets/fonts/HeyWow/HeyWowExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/HeyWow/HeyWowHeavy.ttf
+          weight: 900
+        - asset: assets/fonts/HeyWow/HeyWowLight.ttf
+          weight: 300
+        - asset: assets/fonts/HeyWow/HeyWowMedium.ttf
+          weight: 500
+        - asset: assets/fonts/HeyWow/HeyWowRegular.ttf
+          weight: 400
+        - asset: assets/fonts/HeyWow/HeyWowSemiBold.ttf
+          weight: 600
