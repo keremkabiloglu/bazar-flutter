@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -19,6 +20,10 @@ class ProductGridItem extends StatelessWidget {
     required this.imageUrl,
     required this.adTitle,
     required this.price,
+    this.waitingApproval = false,
+    this.isPassive = false,
+    this.isDisapproved = false,
+    this.isFavorite = false,
   });
 
   final ProductGridItemSize size;
@@ -27,6 +32,10 @@ class ProductGridItem extends StatelessWidget {
   final String imageUrl;
   final String adTitle;
   final double price;
+  final bool waitingApproval;
+  final bool isPassive;
+  final bool isDisapproved;
+  final bool isFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +77,46 @@ class ProductGridItem extends StatelessWidget {
                   children: [
                     buildContainer(productState.name.toUpperCase().tr),
                     const Spacer(),
+                    if (waitingApproval)
+                      const CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 12,
+                        child: Icon(
+                          CupertinoIcons.clock,
+                          color: Colors.orange,
+                          size: 16,
+                        ),
+                      ),
+                    if (isPassive)
+                      const CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 12,
+                        child: Icon(
+                          CupertinoIcons.pause_solid,
+                          color: Colors.black,
+                          size: 16,
+                        ),
+                      ),
+                    if (isDisapproved)
+                      const CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 12,
+                        child: Icon(
+                          CupertinoIcons.xmark_circle_fill,
+                          color: Colors.red,
+                          size: 16,
+                        ),
+                      ),
+                    if (isFavorite)
+                      const CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 12,
+                        child: Icon(
+                          CupertinoIcons.heart_fill,
+                          color: Colors.red,
+                          size: 16,
+                        ),
+                      ),
                   ],
                 ),
                 const Spacer(),

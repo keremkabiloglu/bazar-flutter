@@ -1,10 +1,10 @@
-import 'package:bazar_flutter/screens/category/view/components/category_list_item.dart';
-import 'package:bazar_flutter/screens/category/view/components/sub_category_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../main/components/app_app_bar.dart';
 import '../controller/category_screen_controller.dart';
+import 'components/category_list_item.dart';
+import 'components/sub_category_list_item.dart';
 
 class CategoryScreen extends GetView<CategoryScreenController> {
   static const routeName = '/category/:categoryId';

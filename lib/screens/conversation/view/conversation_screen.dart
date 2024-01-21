@@ -1,10 +1,10 @@
-import 'package:bazar_flutter/screens/conversation/view/components/conversation_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controller/conversation_screen_controller.dart';
 import 'components/conversation_app_bar.dart';
 import 'components/conversation_bottom_sheet.dart';
+import 'components/conversation_bubble.dart';
 
 class ConversationScreen extends GetView<ConversationScreenController> {
   static const routeName = '/conversation/:conversationId';

@@ -8,11 +8,13 @@ class ProfileMenuItem extends StatelessWidget {
     required this.iconAsset,
     required this.onPressed,
     this.color,
+    this.iconColor,
   });
 
   final String title;
   final String iconAsset;
   final Color? color;
+  final Color? iconColor;
   final VoidCallback onPressed;
 
   @override
@@ -38,9 +40,9 @@ class ProfileMenuItem extends StatelessWidget {
       ),
       trailing: SvgPicture.asset(
         iconAsset,
-        colorFilter: color != null
+        colorFilter: color != null || iconColor != null
             ? ColorFilter.mode(
-                color!,
+                color ?? iconColor!,
                 BlendMode.srcIn,
               )
             : null,

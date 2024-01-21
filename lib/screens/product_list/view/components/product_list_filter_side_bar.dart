@@ -1,12 +1,12 @@
-import 'package:bazar_flutter/screens/product_list/model/filter_check_box_item.dart';
-import 'package:bazar_flutter/util/model/product_state.dart';
-import 'package:bazar_flutter/util/util.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../util/comonents/app_switch_list_tile.dart';
 import '../../../../util/model/delivery_method.dart';
+import '../../../../util/model/product_state.dart';
+import '../../../../util/util.dart';
 import '../../controller/product_list_screen_controller.dart';
+import '../../model/filter_check_box_item.dart';
 
 class ProductListFilterSideBar extends StatelessWidget {
   const ProductListFilterSideBar({super.key, required this.controller});

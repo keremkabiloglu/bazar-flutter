@@ -8,8 +8,16 @@ import '../screens/main/controller/main_screen_binding.dart';
 import '../screens/main/view/main_screen.dart';
 import '../screens/product_list/controller/product_list_screen_binding.dart';
 import '../screens/product_list/view/product_list_screen.dart';
+import '../screens/profile/sub_screens/account_buyings/controller/account_buyings_screen_binding.dart';
+import '../screens/profile/sub_screens/account_buyings/view/account_buyings_screen.dart';
+import '../screens/profile/sub_screens/account_favorites/controller/account_favorites_screen_binding.dart';
+import '../screens/profile/sub_screens/account_favorites/view/account_favorites_screen.dart';
 import '../screens/profile/sub_screens/account_information/controller/account_information_screen_binding.dart';
 import '../screens/profile/sub_screens/account_information/view/account_information_screen.dart';
+import '../screens/profile/sub_screens/account_notifications/controller/account_notifications_screen_binding.dart';
+import '../screens/profile/sub_screens/account_notifications/view/account_notifications_screen.dart';
+import '../screens/profile/sub_screens/account_orders/controller/account_orders_screen_binding.dart';
+import '../screens/profile/sub_screens/account_orders/view/account_orders_screen.dart';
 import '../screens/profile/sub_screens/account_products/controller/account_products_screen_binding.dart';
 import '../screens/profile/sub_screens/account_products/view/account_products_screen.dart';
 import '../screens/search/controller/search_screen_binding.dart';
@@ -58,6 +66,26 @@ class AppPages {
       name: AccountProductsScreen.routeName,
       page: () => const AccountProductsScreen(),
       binding: AccountProductsScreenBinding(),
+    ),
+    GetPage(
+      name: AccountFavoritesScreen.routeName,
+      page: () => const AccountFavoritesScreen(),
+      binding: AccountFavoritesScreenBinding(),
+    ),
+    GetPage(
+      name: AccountOrdersScreen.routeName,
+      page: () => const AccountOrdersScreen(),
+      binding: AccountOrdersScreenBinding(),
+    ),
+    GetPage(
+      name: AccountBuyingsScreen.routeName,
+      page: () => const AccountBuyingsScreen(),
+      binding: AccountBuyingsScreenBinding(),
+    ),
+    GetPage(
+      name: AccountNotificationsScreen.routeName,
+      page: () => const AccountNotificationsScreen(),
+      binding: AccountNotificationsScreenBinding(),
     ),
   ];
 }

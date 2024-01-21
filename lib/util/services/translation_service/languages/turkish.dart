@@ -47,6 +47,7 @@ class Turkish extends ILanguage {
         'CLOSE': 'Kapat',
         'DEFAULT': 'Varsayılan',
         'PRICE_LOW_TO_HIGH': 'Artan Fiyat',
+        'PRICE_HIGH_TO_LOW': 'Azalan Fiyat',
         'SEE_PROFILE': 'Profili Gör',
         'FOLLOW': 'Takip Et',
         'BLOCK': 'Engelle',
@@ -57,7 +58,7 @@ class Turkish extends ILanguage {
         'MY_FAVORITES': 'Favorilerim',
         'MY_SALES': 'Satışlarım',
         'MY_BUYINGS': 'Alışverişlerim',
-        'MY_LAST_PROCESSES': 'Son İşlemlerim',
+        'MY_NOTIFICATIONS': 'Bildirimlerim',
         'ANALYTICS': 'Analizler',
         'MY_CUPONS': 'Kuponlarım',
         'MY_ADDRESSES': 'Adreslerim',
@@ -78,6 +79,14 @@ class Turkish extends ILanguage {
         'AWAITING_APPROVAL_ADVERTS': 'Onay Bekleyen İlanlar',
         'DEACTIVE_ADVERTS': 'Pasif İlanlar',
         'DISAPPROVED_ADVERTS': 'Onaylanmayan İlanlar',
+        'ORDER_BY': 'Sırala',
+        'NEW_TO_OLD': 'Yeniden Eskiye',
+        'OLD_TO_NEW': 'Eskiden Yeniye',
+        'COMPLETED': 'Tamamlandı',
+        'CANCELED': 'İptal Edildi',
+        'WAITING_FOR_CONFIRMATION': 'Onay Bekliyor',
+        'WAITING_FOR_SHIPMENT': 'Kargoya Verilecek',
+        'WAITING_FOR_DELIVERY': 'Teslimat Bekliyor',
       };
 
   @override

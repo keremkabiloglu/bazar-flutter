@@ -1,10 +1,10 @@
-import 'package:bazar_flutter/screens/product_list/model/filter_check_box_item.dart';
-import 'package:bazar_flutter/screens/product_list/model/order_by_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../util/model/delivery_method.dart';
 import '../../../util/model/product_state.dart';
+import '../model/filter_check_box_item.dart';
+import '../model/order_by_dialog.dart';
 
 class ProductListScreenController extends GetxController {
   final demoProducts = List.generate(100, (index) => 'Product $index');

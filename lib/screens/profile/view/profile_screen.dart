@@ -1,9 +1,13 @@
-import 'package:bazar_flutter/screens/profile/sub_screens/account_products/view/account_products_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controller/profile_screen_controller.dart';
+import '../sub_screens/account_buyings/view/account_buyings_screen.dart';
+import '../sub_screens/account_favorites/view/account_favorites_screen.dart';
 import '../sub_screens/account_information/view/account_information_screen.dart';
+import '../sub_screens/account_notifications/view/account_notifications_screen.dart';
+import '../sub_screens/account_orders/view/account_orders_screen.dart';
+import '../sub_screens/account_products/view/account_products_screen.dart';
 import 'components/profile_menu_item.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -32,23 +36,32 @@ class ProfileScreen extends StatelessWidget {
           ),
           ProfileMenuItem(
             title: 'MY_FAVORITES'.tr,
-            iconAsset: 'assets/icons/products.svg',
-            onPressed: () {},
+            iconAsset: 'assets/icons/heart.svg',
+            iconColor: const Color(0xFF242424).withOpacity(.75),
+            onPressed: () {
+              Get.toNamed(AccountFavoritesScreen.routeName);
+            },
           ),
           ProfileMenuItem(
             title: 'MY_SALES'.tr,
             iconAsset: 'assets/icons/try.svg',
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AccountOrdersScreen.routeName);
+            },
           ),
           ProfileMenuItem(
             title: 'MY_BUYINGS'.tr,
             iconAsset: 'assets/icons/shopping_cart.svg',
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AccountBuyingsScreen.routeName);
+            },
           ),
           ProfileMenuItem(
-            title: 'MY_LAST_PROCESSES'.tr,
-            iconAsset: 'assets/icons/list.svg',
-            onPressed: () {},
+            title: 'MY_NOTIFICATIONS'.tr,
+            iconAsset: 'assets/icons/box.svg',
+            onPressed: () {
+              Get.toNamed(AccountNotificationsScreen.routeName);
+            },
           ),
           ProfileMenuItem(
             title: 'ANALYTICS'.tr,
