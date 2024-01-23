@@ -1,8 +1,11 @@
+import 'package:bazar_flutter/screens/profile/sub_screens/account_addresses/view/account_addresses_screen.dart';
+import 'package:bazar_flutter/screens/profile/sub_screens/account_bank_accounts/view/account_bank_accounts_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controller/profile_screen_controller.dart';
 import '../sub_screens/account_buyings/view/account_buyings_screen.dart';
+import '../sub_screens/account_cupons/view/account_cupons_screen.dart';
 import '../sub_screens/account_favorites/view/account_favorites_screen.dart';
 import '../sub_screens/account_information/view/account_information_screen.dart';
 import '../sub_screens/account_notifications/view/account_notifications_screen.dart';
@@ -59,6 +62,7 @@ class ProfileScreen extends StatelessWidget {
           ProfileMenuItem(
             title: 'MY_NOTIFICATIONS'.tr,
             iconAsset: 'assets/icons/box.svg',
+            badgeCount: 1000,
             onPressed: () {
               Get.toNamed(AccountNotificationsScreen.routeName);
             },
@@ -71,17 +75,23 @@ class ProfileScreen extends StatelessWidget {
           ProfileMenuItem(
             title: 'MY_CUPONS'.tr,
             iconAsset: 'assets/icons/cupon.svg',
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AccountCuponsScreen.routeName);
+            },
           ),
           ProfileMenuItem(
             title: 'MY_ADDRESSES'.tr,
             iconAsset: 'assets/icons/my_address.svg',
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AccountAddressesScreen.routeName);
+            },
           ),
           ProfileMenuItem(
             title: 'MY_BANK_ACCOUNTS'.tr,
             iconAsset: 'assets/icons/cash.svg',
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AccountBankAccountsScreen.routeName);
+            },
           ),
           ProfileMenuItem(
             title: 'SUPPORT'.tr,

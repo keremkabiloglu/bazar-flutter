@@ -87,6 +87,8 @@ class Turkish extends ILanguage {
         'WAITING_FOR_CONFIRMATION': 'Onay Bekliyor',
         'WAITING_FOR_SHIPMENT': 'Kargoya Verilecek',
         'WAITING_FOR_DELIVERY': 'Teslimat Bekliyor',
+        'PRODUCT': 'Ürün',
+        'EXPIRE_DATE': 'Son Kullanma Tarihi',
       };
 
   @override

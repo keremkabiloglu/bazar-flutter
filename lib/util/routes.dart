@@ -8,8 +8,14 @@ import '../screens/main/controller/main_screen_binding.dart';
 import '../screens/main/view/main_screen.dart';
 import '../screens/product_list/controller/product_list_screen_binding.dart';
 import '../screens/product_list/view/product_list_screen.dart';
+import '../screens/profile/sub_screens/account_addresses/controller/account_addresses_screen_binding.dart';
+import '../screens/profile/sub_screens/account_addresses/view/account_addresses_screen.dart';
+import '../screens/profile/sub_screens/account_bank_accounts/controller/account_bank_account_screen_binding.dart';
+import '../screens/profile/sub_screens/account_bank_accounts/view/account_bank_accounts_screen.dart';
 import '../screens/profile/sub_screens/account_buyings/controller/account_buyings_screen_binding.dart';
 import '../screens/profile/sub_screens/account_buyings/view/account_buyings_screen.dart';
+import '../screens/profile/sub_screens/account_cupons/controller/account_cupons_screen_binding.dart';
+import '../screens/profile/sub_screens/account_cupons/view/account_cupons_screen.dart';
 import '../screens/profile/sub_screens/account_favorites/controller/account_favorites_screen_binding.dart';
 import '../screens/profile/sub_screens/account_favorites/view/account_favorites_screen.dart';
 import '../screens/profile/sub_screens/account_information/controller/account_information_screen_binding.dart';
@@ -86,6 +92,21 @@ class AppPages {
       name: AccountNotificationsScreen.routeName,
       page: () => const AccountNotificationsScreen(),
       binding: AccountNotificationsScreenBinding(),
+    ),
+    GetPage(
+      name: AccountCuponsScreen.routeName,
+      page: () => const AccountCuponsScreen(),
+      binding: AccountCuponsScreenBinding(),
+    ),
+    GetPage(
+      name: AccountAddressesScreen.routeName,
+      page: () => const AccountAddressesScreen(),
+      binding: AccountAddressesScreenBinding(),
+    ),
+    GetPage(
+      name: AccountBankAccountsScreen.routeName,
+      page: () => const AccountBankAccountsScreen(),
+      binding: AccountBankAccountsScreenBinding(),
     ),
   ];
 }

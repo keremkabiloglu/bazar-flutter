@@ -38,6 +38,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
                 keyboardType: TextInputType.text,
                 textInputAction: TextInputAction.search,
                 readOnly: onSearchChanged == null && onSearchSubmitted == null,
+                autofocus: onSearchChanged != null && onSearchSubmitted != null,
                 onSubmitted: onSearchSubmitted,
                 onChanged: onSearchChanged,
                 onTap: (onSearchChanged == null && onSearchSubmitted == null)

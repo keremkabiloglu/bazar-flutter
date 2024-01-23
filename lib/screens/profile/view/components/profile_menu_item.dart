@@ -9,6 +9,7 @@ class ProfileMenuItem extends StatelessWidget {
     required this.onPressed,
     this.color,
     this.iconColor,
+    this.badgeCount,
   });
 
   final String title;
@@ -16,6 +17,7 @@ class ProfileMenuItem extends StatelessWidget {
   final Color? color;
   final Color? iconColor;
   final VoidCallback onPressed;
+  final int? badgeCount;
 
   @override
   Widget build(BuildContext context) {
@@ -38,14 +40,39 @@ class ProfileMenuItem extends StatelessWidget {
           color: const Color(0xFF242424).withOpacity(.25),
         ),
       ),
-      trailing: SvgPicture.asset(
-        iconAsset,
-        colorFilter: color != null || iconColor != null
-            ? ColorFilter.mode(
-                color ?? iconColor!,
-                BlendMode.srcIn,
-              )
-            : null,
+      trailing: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          SvgPicture.asset(
+            iconAsset,
+            colorFilter: color != null || iconColor != null
+                ? ColorFilter.mode(
+                    color ?? iconColor!,
+                    BlendMode.srcIn,
+                  )
+                : null,
+          ),
+          if (badgeCount != null && badgeCount! > 0)
+            Positioned(
+              top: -5,
+              right: -5,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 2),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(100),
+                ),
+                child: Text(
+                  badgeCount! > 99 ? '99+' : badgeCount.toString(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 10,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+        ],
       ),
     );
   }
