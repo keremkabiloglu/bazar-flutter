@@ -6,6 +6,7 @@ import '../screens/conversation/controller/conversation_screen_binding.dart';
 import '../screens/conversation/view/conversation_screen.dart';
 import '../screens/main/controller/main_screen_binding.dart';
 import '../screens/main/view/main_screen.dart';
+import '../screens/product/view/product_screen.dart';
 import '../screens/product_list/controller/product_list_screen_binding.dart';
 import '../screens/product_list/view/product_list_screen.dart';
 import '../screens/profile/sub_screens/account_addresses/controller/account_addresses_screen_binding.dart';
@@ -107,6 +108,10 @@ class AppPages {
       name: AccountBankAccountsScreen.routeName,
       page: () => const AccountBankAccountsScreen(),
       binding: AccountBankAccountsScreenBinding(),
+    ),
+    GetPage(
+      name: ProductScreen.routeName,
+      page: () => const ProductScreen(),
     ),
   ];
 }

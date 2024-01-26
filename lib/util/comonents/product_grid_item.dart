@@ -48,7 +48,9 @@ class ProductGridItem extends StatelessWidget {
     return Column(
       children: [
         MaterialButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed('/product/$adId');
+          },
           onLongPress: () {
             HapticFeedback.mediumImpact();
             Navigator.push(

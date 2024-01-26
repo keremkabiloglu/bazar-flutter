@@ -89,6 +89,10 @@ class Turkish extends ILanguage {
         'WAITING_FOR_DELIVERY': 'Teslimat Bekliyor',
         'PRODUCT': 'Ürün',
         'EXPIRE_DATE': 'Son Kullanma Tarihi',
+        'BUY_@PRICE': 'Satın Al (@price)',
+        'GIVE_OFFER': 'Teklif Ver',
+        'PRODUCT_DETAILS': 'Ürün Detayları',
+        'DESCRIPTION': 'Açıklama',
       };
 
   @override
