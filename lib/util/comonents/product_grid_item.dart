@@ -1,9 +1,10 @@
 import 'dart:math';
-import 'dart:ui';
 
 import 'package:bazar_flutter/util/comonents/hero_dialog_route.dart';
+import 'package:bazar_flutter/util/comonents/product_focus_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
@@ -49,146 +50,12 @@ class ProductGridItem extends StatelessWidget {
         MaterialButton(
           onPressed: () {},
           onLongPress: () {
+            HapticFeedback.mediumImpact();
             Navigator.push(
               context,
               HeroDialogRoute(
-                builder: (context) => BackdropFilter(
-                  filter: ImageFilter.blur(
-                    sigmaX: 5,
-                    sigmaY: 5,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Stack(
-                        children: [
-                          Hero(
-                            tag: '$randomNumber',
-                            child: Container(
-                              width: context.width * 0.6,
-                              height: (context.width * 0.6) * 1.5,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    imageUrl,
-                                  ),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            right: 8,
-                            left: 8,
-                            bottom: 8,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(8),
-                                  decoration: BoxDecoration(
-                                    color: Colors.black.withOpacity(0.5),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: const Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      CircleAvatar(
-                                        backgroundColor: Colors.white,
-                                        radius: 4,
-                                      ),
-                                      SizedBox(width: 8),
-                                      CircleAvatar(
-                                        backgroundColor: Colors.grey,
-                                        radius: 4,
-                                      ),
-                                      SizedBox(width: 8),
-                                      CircleAvatar(
-                                        backgroundColor: Colors.grey,
-                                        radius: 4,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Container(
-                              width: ((context.width * 0.6) / 3) - 16,
-                              height: ((context.width * 0.6) / 3) - 16,
-                              margin: const EdgeInsets.symmetric(horizontal: 8),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.white.withOpacity(0.2),
-                                    spreadRadius: 1.5,
-                                    blurRadius: 3,
-                                    offset: const Offset(0, 0),
-                                  ),
-                                ],
-                              ),
-                              child: const Icon(
-                                Icons.favorite_border,
-                                size: 32,
-                              ),
-                            ),
-                            Container(
-                              width: ((context.width * 0.6) / 3) - 16,
-                              height: ((context.width * 0.6) / 3) - 16,
-                              margin: const EdgeInsets.symmetric(horizontal: 8),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.white.withOpacity(0.2),
-                                    spreadRadius: 1.5,
-                                    blurRadius: 3,
-                                    offset: const Offset(0, 0),
-                                  ),
-                                ],
-                              ),
-                              child: const Icon(
-                                CupertinoIcons.bubble_left,
-                                size: 32,
-                              ),
-                            ),
-                            Container(
-                              width: ((context.width * 0.6) / 3) - 16,
-                              height: ((context.width * 0.6) / 3) - 16,
-                              margin: const EdgeInsets.symmetric(horizontal: 8),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.white.withOpacity(0.2),
-                                    spreadRadius: 1.5,
-                                    blurRadius: 3,
-                                    offset: const Offset(0, 0),
-                                  ),
-                                ],
-                              ),
-                              child: const Icon(
-                                CupertinoIcons.share,
-                                size: 32,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                builder: (context) => ProductFocusDialog(
+                  heroTag: randomNumber,
                 ),
               ),
             );
@@ -200,7 +67,7 @@ class ProductGridItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           child: Hero(
-            tag: '$randomNumber',
+            tag: randomNumber,
             child: Container(
               height: height(context),
               width: double.infinity,
@@ -330,11 +197,14 @@ class ProductGridItem extends StatelessWidget {
           color: const Color(0xFF3B3B3B),
           borderRadius: BorderRadius.circular(100),
         ),
-        child: Text(
-          label,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 13,
+        child: Material(
+          color: Colors.transparent,
+          child: Text(
+            label,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 13,
+            ),
           ),
         ),
       );
