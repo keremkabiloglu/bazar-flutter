@@ -44,7 +44,7 @@ class ProductPriceCondition extends StatelessWidget {
             child: Text(
               ProductState.littleUsed.name.toUpperCase().tr,
               style: const TextStyle(
-                fontSize: 16,
+                fontSize: 14,
                 fontWeight: FontWeight.w500,
                 color: Colors.white,
               ),

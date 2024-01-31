@@ -44,7 +44,7 @@ class ProductAttributes extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(10),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
       margin: const EdgeInsets.only(right: 12),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -52,7 +52,7 @@ class ProductAttributes extends StatelessWidget {
           Text(
             '$title:',
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -62,7 +62,7 @@ class ProductAttributes extends StatelessWidget {
           Text(
             value,
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w400,
             ),
           ),

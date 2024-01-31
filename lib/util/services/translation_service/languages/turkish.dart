@@ -93,6 +93,15 @@ class Turkish extends ILanguage {
         'GIVE_OFFER': 'Teklif Ver',
         'PRODUCT_DETAILS': 'Ürün Detayları',
         'DESCRIPTION': 'Açıklama',
+        'SIMILAR_PRODUCTS': 'Benzer Ürünler',
+        'SELLER_OTHER_PRODUCTS': 'Satıcının Diğer Ürünleri',
+        'QUESTIONS': 'Sorular',
+        'SELLER_DETAILS': 'Satıcı Detayları',
+        'INSTALLMENT_OPTINOS': 'Taksit Seçenekleri',
+        'COLLAPSE': 'Daralt',
+        'EXPAND': 'Genişlet',
+        'ASK_SOMETHING': 'Bir şeyler sor...',
+        'ASK': 'Sor',
       };
 
   @override

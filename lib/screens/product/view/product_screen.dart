@@ -1,8 +1,10 @@
 import 'package:bazar_flutter/screens/product/view/components/product_attributes.dart';
 import 'package:bazar_flutter/screens/product/view/components/product_details.dart';
 import 'package:bazar_flutter/screens/product/view/components/product_name_seller.dart';
+import 'package:bazar_flutter/screens/product/view/components/product_other_products.dart';
 import 'package:bazar_flutter/screens/product/view/components/product_price_condition.dart';
 import 'package:bazar_flutter/screens/product/view/components/product_screen_bottom_navigation_bar.dart';
+import 'package:bazar_flutter/screens/product/view/components/product_tabs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -34,6 +36,7 @@ class ProductScreen extends StatelessWidget {
         ),
         bottomNavigationBar: const ProductScreenBottomNavigationBar(),
         body: ListView(
+          controller: controller.pageScrollController,
           children: [
             ProductPhotos(
               controller: controller,
@@ -49,6 +52,15 @@ class ProductScreen extends StatelessWidget {
             ),
             ProductDetails(
               controller: controller,
+            ),
+            ProductTabs(
+              controller: controller,
+            ),
+            ProductOtherProducts(
+              title: 'SIMILAR_PRODUCTS'.tr,
+            ),
+            ProductOtherProducts(
+              title: 'SELLER_OTHER_PRODUCTS'.tr,
             ),
           ],
         ),
