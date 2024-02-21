@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 import '../controller/account_information_screen_controller.dart';
 
@@ -143,7 +144,8 @@ class AccountInformationScreen
                               fit: BoxFit.scaleDown,
                               alignment: Alignment.centerRight,
                               child: Text(
-                                '12.01.2024'.tr,
+                                DateFormat('dd.MM.yyyy')
+                                    .format(controller.accountCreationDate),
                                 style: const TextStyle(
                                   fontWeight: FontWeight.w300,
                                 ),

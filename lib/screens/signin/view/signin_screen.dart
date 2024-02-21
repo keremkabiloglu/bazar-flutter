@@ -1,7 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../controller/sigin_screen_controller.dart';
+import '../../signup/view/signup_screen.dart';
+import '../controller/signin_screen_controller.dart';
 import 'components/signin_form.dart';
 
 class SigninScreen extends GetView<SigninScreenController> {
@@ -12,6 +14,9 @@ class SigninScreen extends GetView<SigninScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -19,9 +24,43 @@ class SigninScreen extends GetView<SigninScreenController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SignInForm(
-                controller: controller,
+              Padding(
+                padding: EdgeInsets.only(bottom: context.height * .1),
+                child: Text(
+                  'SIGNIN'.tr,
+                  style: const TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
               ),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: SignInForm(
+                    controller: controller,
+                  ),
+                ),
+              ),
+              Center(
+                child: Text.rich(
+                  TextSpan(
+                    text: 'DONT_HAVE_AN_ACCOUNT'.tr,
+                    children: [
+                      TextSpan(
+                        text: ' ${'CREATE_ACCOUNT'.tr}',
+                        style: TextStyle(
+                          color: Get.theme.colorScheme.primary,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Get.toNamed(SignupScreen.routeName);
+                          },
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),

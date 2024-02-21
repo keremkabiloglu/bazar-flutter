@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
-import '../../controller/sigin_screen_controller.dart';
+import '../../controller/signin_screen_controller.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({super.key, required this.controller});
@@ -60,7 +61,7 @@ class SignInForm extends StatelessWidget {
                 obscureText: controller.obSecure.value,
                 validator: controller.passwordValidator,
                 decoration: InputDecoration(
-                  hintText: 'password'.tr.toLowerCase(),
+                  hintText: 'PASSWORD'.tr.toLowerCase(),
                   prefixIcon: Padding(
                     padding: const EdgeInsets.all(12),
                     child: SvgPicture.asset(
@@ -84,12 +85,61 @@ class SignInForm extends StatelessWidget {
               child: Text('FORGOT_MY_PASSWORD'.tr),
             ),
           ),
-          ElevatedButton(
-            onPressed: controller.onPressedSignIn,
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size(double.infinity, 48),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16),
+            child: ElevatedButton(
+              onPressed: controller.onPressedSignIn,
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(double.infinity, 48),
+              ),
+              child: Text('SIGNIN'.tr),
             ),
-            child: Text('SIGIN'.tr),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16),
+            child: Row(
+              children: [
+                const Expanded(
+                  child: Divider(
+                    color: Colors.black,
+                    height: 36,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: Text(
+                    'OR'.tr,
+                    style: TextStyle(
+                      color: Get.theme.colorScheme.primary,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                const Expanded(
+                  child: Divider(
+                    color: Colors.black,
+                    height: 36,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16),
+            child: SignInWithAppleButton(
+              height: 48,
+              text: 'SIGN_IN_WITH_APPLE'.tr,
+              onPressed: () {},
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 16),
+            child: SignInWithAppleButton(
+              height: 48,
+              style: SignInWithAppleButtonStyle.white,
+              text: 'SIGN_IN_WITH_GOOGLE'.tr,
+              onPressed: () {},
+            ),
           ),
         ],
       ),

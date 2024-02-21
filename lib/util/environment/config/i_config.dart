@@ -1,4 +1,4 @@
 abstract class IConfig {
   String get host;
-  String get userPath => '$host/user';
+  String get userPath => '$host/user-service/user';
 }

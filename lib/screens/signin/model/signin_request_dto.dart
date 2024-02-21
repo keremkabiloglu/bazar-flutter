@@ -1,8 +1,8 @@
-class SiginRequestDto {
+class SigninRequestDto {
   final String email;
   final String password;
 
-  SiginRequestDto({
+  SigninRequestDto({
     required this.email,
     required this.password,
   });

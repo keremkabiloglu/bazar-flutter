@@ -24,12 +24,12 @@ class UserService extends GetxService {
     }
   }
 
-  Future<User?> authUser(SiginRequestDto siginRequestDto) async {
+  Future<User?> authUser(SigninRequestDto signinRequestDto) async {
     final response = await Get.find<ApiService>().makeRequest(
       ApiRequest(
         path: '${Environment.config.userPath}/login',
         type: RequestType.post,
-        data: siginRequestDto.toJson(),
+        data: signinRequestDto.toJson(),
         showLoader: true,
         showError: true,
       ),

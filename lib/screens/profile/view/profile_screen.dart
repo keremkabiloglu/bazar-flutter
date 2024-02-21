@@ -1,5 +1,7 @@
 import 'package:bazar_flutter/screens/profile/sub_screens/account_addresses/view/account_addresses_screen.dart';
 import 'package:bazar_flutter/screens/profile/sub_screens/account_bank_accounts/view/account_bank_accounts_screen.dart';
+import 'package:bazar_flutter/util/services/app_service/app_service.dart';
+import 'package:bazar_flutter/util/services/user_service/user_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -107,7 +109,12 @@ class ProfileScreen extends StatelessWidget {
             title: 'LOGOUT'.tr,
             color: const Color(0xFFDF0707),
             iconAsset: 'assets/icons/exit.svg',
-            onPressed: () {},
+            onPressed: () {
+              Get.find<UserService>().logout().then((_) {
+                Get.offAllNamed('/');
+                Get.find<AppService>().showSuccess('LOGOUT_SUCCESS'.tr);
+              });
+            },
           ),
           SizedBox(
             height: Get.context!.mediaQuery.padding.bottom + 70,

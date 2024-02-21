@@ -19,7 +19,7 @@ class SigninScreenController extends GetxController {
   void onInit() {
     if (kDebugMode) {
       emailController.text = 'example@example.com';
-      passwordController.text = 'kerem123';
+      passwordController.text = '1234';
     }
     super.onInit();
   }
@@ -32,7 +32,7 @@ class SigninScreenController extends GetxController {
     if (formKey.currentState!.validate()) {
       Get.find<UserService>()
           .authUser(
-        SiginRequestDto(
+        SigninRequestDto(
           email: emailController.text,
           password: passwordController.text,
         ),
@@ -44,7 +44,7 @@ class SigninScreenController extends GetxController {
             'WELCOME_@NAME'.trParams(
               {'name': user.firstName},
             ),
-            title: 'SIGIN_SUCCESS'.tr,
+            title: 'SIGNIN_SUCCESS'.tr,
           );
         }
       });

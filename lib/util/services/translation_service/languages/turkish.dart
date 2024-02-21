@@ -20,9 +20,9 @@ class Turkish extends ILanguage {
         'EMAIL_ADDRESS': 'E-Posta Adresi',
         'PASSWORD': 'Şifre',
         'FORGOT_MY_PASSWORD': 'şifremi Unuttum',
-        'SIGIN': 'Giriş Yap',
+        'SIGNIN': 'Giriş Yap',
         'WELCOME_@NAME': 'Hoşgeldin @name.',
-        'SIGIN_SUCCESS': 'Giriş Başarılı.',
+        'SIGNIN_SUCCESS': 'Giriş Başarılı.',
         'HOME': 'Anasayfa',
         'CATEGORIES': 'Kategoriler',
         'MESSAGES': 'Mesajlar',
@@ -102,6 +102,14 @@ class Turkish extends ILanguage {
         'EXPAND': 'Genişlet',
         'ASK_SOMETHING': 'Bir şeyler sor...',
         'ASK': 'Sor',
+        'LOGOUT_SUCCESS': 'Çıkış Başarılı.',
+        'SIGN_IN_WITH_APPLE': 'Apple İle Giriş Yap',
+        'SIGN_IN_WITH_GOOGLE': 'Google İle Giriş Yap',
+        'DONT_HAVE_AN_ACCOUNT': 'Hesabın yok mu?',
+        'CREATE_ACCOUNT': 'Hesap Oluştur',
+        'VERIFY': 'Doğrula',
+        'I_WANT_TO_RECEIVE_UPDATES':
+            'Kampanyalardan ve güncellemelerden haberdar olmak istiyorum.',
       };
 
   @override

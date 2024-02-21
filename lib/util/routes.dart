@@ -31,6 +31,8 @@ import '../screens/search/controller/search_screen_binding.dart';
 import '../screens/search/view/search_screen.dart';
 import '../screens/signin/controller/signin_screen_binding.dart';
 import '../screens/signin/view/signin_screen.dart';
+import '../screens/signup/controller/signup_screen_binding.dart';
+import '../screens/signup/view/signup_screen.dart';
 
 class AppPages {
   static List<GetPage> pages = [
@@ -38,6 +40,11 @@ class AppPages {
       name: SigninScreen.routeName,
       page: () => const SigninScreen(),
       binding: SigninScreenBinding(),
+    ),
+    GetPage(
+      name: SignupScreen.routeName,
+      page: () => const SignupScreen(),
+      binding: SignupScreenBinding(),
     ),
     GetPage(
       name: MainScreen.routeName,

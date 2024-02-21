@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 
+import 'screens/main/view/main_screen.dart';
 import 'util/routes.dart';
-import 'util/services/app_service/app_service.dart';
 import 'util/services/translation_service/translation_service.dart';
 import 'util/theme.dart';
 
@@ -18,7 +18,7 @@ class App extends StatelessWidget {
       },
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Get.find<AppService>().initialRoute,
+        initialRoute: MainScreen.routeName,
         getPages: AppPages.pages,
         theme: AppTheme.light,
         translations: Get.find<TranslationService>(),
