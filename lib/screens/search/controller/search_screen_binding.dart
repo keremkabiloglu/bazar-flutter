@@ -1,10 +1,12 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 import 'search_screen_controller.dart';
 
-class SearchScreenBinding extends Bindings {
+class SearchScreenBinding extends Binding {
   @override
-  void dependencies() {
-    Get.lazyPut(() => SearchScreenController());
-  }
+  List<Bind> dependencies() => [
+        Bind.lazyPut(
+          () => SearchScreenController(),
+        ),
+      ];
 }

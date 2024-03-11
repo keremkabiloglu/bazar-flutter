@@ -42,7 +42,7 @@ class AppTheme {
             borderRadius: BorderRadius.circular(12),
             borderSide: BorderSide.none,
           ),
-          fillColor: const Color(0xFFF3F3F3),
+          fillColor: const Color.fromARGB(255, 234, 234, 234),
           filled: true,
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(

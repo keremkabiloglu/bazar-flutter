@@ -1,10 +1,12 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 import 'account_buyings_screen_controller.dart';
 
-class AccountBuyingsScreenBinding extends Bindings {
+class AccountBuyingsScreenBinding extends Binding {
   @override
-  void dependencies() {
-    Get.lazyPut(() => AccountBuyingsScreenController());
-  }
+  List<Bind> dependencies() => [
+        Bind.lazyPut(
+          () => AccountBuyingsScreenController(),
+        ),
+      ];
 }

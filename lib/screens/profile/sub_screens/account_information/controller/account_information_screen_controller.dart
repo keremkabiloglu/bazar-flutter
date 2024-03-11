@@ -1,6 +1,7 @@
-import 'package:bazar_flutter/util/services/user_service/user_service.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
+import '../../../../../util/services/user_service/user_service.dart';
 
 class AccountInformationScreenController extends GetxController {
   final nameController = TextEditingController();

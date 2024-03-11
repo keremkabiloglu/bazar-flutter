@@ -1,6 +1,6 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:get/get.dart';
 
 import '../view/components/account_products_order_by_dialog.dart';
 

@@ -1,5 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 class ConversationScreenController extends GetxController {
   final messageController = TextEditingController();

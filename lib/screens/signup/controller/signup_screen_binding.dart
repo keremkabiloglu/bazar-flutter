@@ -1,12 +1,16 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 import 'signup_screen_controller.dart';
 import 'signup_screen_repository.dart';
 
-class SignupScreenBinding extends Bindings {
+class SignupScreenBinding extends Binding {
   @override
-  void dependencies() {
-    Get.lazyPut(() => SignupScreenRepository());
-    Get.lazyPut(() => SignupScreenController());
-  }
+  List<Bind> dependencies() => [
+        Bind.lazyPut(
+          () => SignupScreenController(),
+        ),
+        Bind.lazyPut(
+          () => SignupScreenRepository(),
+        ),
+      ];
 }

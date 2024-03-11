@@ -1,5 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class AccountNotificationItem extends StatelessWidget {
   const AccountNotificationItem({super.key});

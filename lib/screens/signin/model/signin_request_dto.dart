@@ -1,14 +1,14 @@
 class SigninRequestDto {
-  final String email;
+  final String emailPhoneUsername;
   final String password;
 
   SigninRequestDto({
-    required this.email,
+    required this.emailPhoneUsername,
     required this.password,
   });
 
   Map<String, dynamic> toJson() => {
-        'email': email,
+        'emailPhoneUsername': emailPhoneUsername,
         'password': password,
       };
 }

@@ -1,5 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../components/app_app_bar.dart';
 import '../components/app_bottom_navigation_bar.dart';

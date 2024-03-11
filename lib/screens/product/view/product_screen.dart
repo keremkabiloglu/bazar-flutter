@@ -1,16 +1,16 @@
-import 'package:bazar_flutter/screens/product/view/components/product_attributes.dart';
-import 'package:bazar_flutter/screens/product/view/components/product_details.dart';
-import 'package:bazar_flutter/screens/product/view/components/product_name_seller.dart';
-import 'package:bazar_flutter/screens/product/view/components/product_other_products.dart';
-import 'package:bazar_flutter/screens/product/view/components/product_price_condition.dart';
-import 'package:bazar_flutter/screens/product/view/components/product_screen_bottom_navigation_bar.dart';
-import 'package:bazar_flutter/screens/product/view/components/product_tabs.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../controller/product_screen_controller.dart';
+import 'components/product_attributes.dart';
+import 'components/product_details.dart';
+import 'components/product_name_seller.dart';
+import 'components/product_other_products.dart';
 import 'components/product_photos.dart';
+import 'components/product_price_condition.dart';
+import 'components/product_screen_bottom_navigation_bar.dart';
+import 'components/product_tabs.dart';
 
 class ProductScreen extends StatelessWidget {
   static const routeName = '/product/:id';

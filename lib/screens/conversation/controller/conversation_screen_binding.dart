@@ -1,10 +1,12 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 import 'conversation_screen_controller.dart';
 
-class ConversationScreenBinding extends Bindings {
+class ConversationScreenBinding extends Binding {
   @override
-  void dependencies() {
-    Get.lazyPut(() => ConversationScreenController());
-  }
+  List<Bind> dependencies() => [
+        Bind.lazyPut(
+          () => ConversationScreenController(),
+        ),
+      ];
 }

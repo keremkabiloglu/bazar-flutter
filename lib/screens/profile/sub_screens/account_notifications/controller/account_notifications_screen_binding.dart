@@ -1,10 +1,12 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 import 'account_notifications_screen_controller.dart';
 
-class AccountNotificationsScreenBinding extends Bindings {
+class AccountNotificationsScreenBinding extends Binding {
   @override
-  void dependencies() {
-    Get.lazyPut(() => AccountNotificationsScreenController());
-  }
+  List<Bind> dependencies() => [
+        Bind.lazyPut(
+          () => AccountNotificationsScreenController(),
+        ),
+      ];
 }

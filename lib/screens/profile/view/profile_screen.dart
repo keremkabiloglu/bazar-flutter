@@ -1,11 +1,11 @@
-import 'package:bazar_flutter/screens/profile/sub_screens/account_addresses/view/account_addresses_screen.dart';
-import 'package:bazar_flutter/screens/profile/sub_screens/account_bank_accounts/view/account_bank_accounts_screen.dart';
-import 'package:bazar_flutter/util/services/app_service/app_service.dart';
-import 'package:bazar_flutter/util/services/user_service/user_service.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
+import '../../../util/services/app_service/app_service.dart';
+import '../../../util/services/user_service/user_service.dart';
 import '../controller/profile_screen_controller.dart';
+import '../sub_screens/account_addresses/view/account_addresses_screen.dart';
+import '../sub_screens/account_bank_accounts/view/account_bank_accounts_screen.dart';
 import '../sub_screens/account_buyings/view/account_buyings_screen.dart';
 import '../sub_screens/account_cupons/view/account_cupons_screen.dart';
 import '../sub_screens/account_favorites/view/account_favorites_screen.dart';

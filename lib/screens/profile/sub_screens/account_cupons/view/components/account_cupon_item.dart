@@ -1,6 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 class AccountCuponItem extends StatelessWidget {
   const AccountCuponItem({super.key});

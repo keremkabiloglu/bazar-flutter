@@ -1,6 +1,6 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:get/get.dart';
 
 import '../../../util/comonents/product_grid_item.dart';
 import '../../../util/model/product_state.dart';

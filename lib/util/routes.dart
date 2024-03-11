@@ -1,4 +1,4 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 import '../screens/category/controller/category_screen_binding.dart';
 import '../screens/category/view/category_screen.dart';

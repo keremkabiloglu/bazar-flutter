@@ -1,6 +1,6 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../controller/account_addresses_screen_controller.dart';
 import 'components/account_address_item.dart';

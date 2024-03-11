@@ -1,5 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class AccountFavoritesOrderByDialog extends StatelessWidget {
   const AccountFavoritesOrderByDialog({super.key});

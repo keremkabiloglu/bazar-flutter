@@ -1,7 +1,6 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 
 import '../../../search/view/search_screen.dart';
 import '../../controller/product_list_screen_controller.dart';

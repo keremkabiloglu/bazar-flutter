@@ -1,15 +1,11 @@
 import 'dart:io';
 
-import 'package:dio/dio.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart' hide Response;
 
 import '../../../screens/signin/model/signin_request_dto.dart';
 import '../../environment/environment.dart';
-import '../api_service/api_service.dart';
-import '../api_service/model/api_request.dart';
 import '../app_service/app_service.dart';
-import '../storage_service/storage_service.dart';
 import 'model/user.dart';
 
 class UserService extends GetxService {
@@ -25,43 +21,41 @@ class UserService extends GetxService {
   }
 
   Future<User?> authUser(SigninRequestDto signinRequestDto) async {
-    final response = await Get.find<ApiService>().makeRequest(
-      ApiRequest(
-        path: '${Environment.config.userPath}/login',
-        type: RequestType.post,
-        data: signinRequestDto.toJson(),
-        showLoader: true,
-        showError: true,
-      ),
+    final response = await Get.find<ApiService>().request(
+      path: '${Environment.config.userPath}/login',
+      method: HttpMethod.post,
+      data: signinRequestDto.toJson(),
+      showLoader: true,
+      showError: true,
     );
-    if (response.isOk) {
-      await _setUserFromResponse(response);
+    if (response?.isOk ?? false) {
+      await _setUserFromResponse(response!);
       return user;
     }
     await logout();
     return null;
   }
 
+  Future<User?> authUserFromResponse(Response response) async {
+    return await _setUserFromResponse(response);
+  }
+
   Future<User?> refreshUser(Cookie refreshCookie) async {
-    final response = await Get.find<ApiService>().makeRequest(
-      ApiRequest(
-        path: '${Environment.config.userPath}/refresh',
-        options: Options(
-          headers: {
-            HttpHeaders.cookieHeader: refreshCookie.toString(),
-          },
-        ),
-        type: RequestType.post,
-        showLoader: false,
-        showError: false,
-      ),
+    final response = await Get.find<ApiService>().request(
+      path: '${Environment.config.userPath}/refresh',
+      method: HttpMethod.post,
+      showError: false,
+      showLoader: false,
+      headers: {
+        HttpHeaders.cookieHeader: refreshCookie.toString(),
+      },
     );
-    if (response.isOk) {
-      await _setUserFromResponse(response);
+    if (response?.isOk ?? false) {
+      await _setUserFromResponse(response!);
       return user;
     } else {
       WidgetsBinding.instance.addPostFrameCallback((_) async {
-        Get.find<AppService>().showError('${response.data}');
+        Get.find<AppService>().showError('${response?.data ?? ''}');
       });
     }
     await logout();
@@ -109,8 +103,8 @@ class UserService extends GetxService {
 
   Future<void> _writeCookie(Cookie cookie) async {
     await Get.find<StorageService>().write(
-      key: 'userRefreshCookie',
-      value: cookie.toString(),
+      'userRefreshCookie',
+      cookie.toString(),
     );
   }
 

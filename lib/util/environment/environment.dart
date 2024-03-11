@@ -1,4 +1,4 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 import 'config/development_config.dart';
 import 'config/i_config.dart';

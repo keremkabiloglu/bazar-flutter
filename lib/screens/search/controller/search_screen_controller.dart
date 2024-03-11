@@ -1,4 +1,4 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 class SearchScreenController extends GetxController {
   void onSearchChanged(String value) {

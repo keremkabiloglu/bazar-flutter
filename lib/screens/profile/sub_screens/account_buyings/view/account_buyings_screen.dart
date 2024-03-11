@@ -1,6 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 
 import '../../../../../util/model/order_state_enum.dart';
 import 'components/account_buying_item.dart';

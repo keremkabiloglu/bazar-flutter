@@ -1,5 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:get/get.dart';
 
 import '../../controller/product_screen_controller.dart';
 

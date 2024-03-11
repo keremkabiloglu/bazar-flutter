@@ -1,9 +1,9 @@
-import 'package:bazar_flutter/screens/product/view/components/product_questions.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../controller/product_screen_controller.dart';
+import 'product_questions.dart';
 
 class ProductTabs extends StatelessWidget {
   const ProductTabs({super.key, required this.controller});

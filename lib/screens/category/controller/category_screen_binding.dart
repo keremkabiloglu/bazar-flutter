@@ -1,10 +1,12 @@
-import 'package:get/get.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 
 import 'category_screen_controller.dart';
 
-class CategoryScreenBinding extends Bindings {
+class CategoryScreenBinding extends Binding {
   @override
-  void dependencies() {
-    Get.lazyPut(() => CategoryScreenController());
-  }
+  List<Bind> dependencies() => [
+        Bind.lazyPut(
+          () => CategoryScreenController(),
+        ),
+      ];
 }

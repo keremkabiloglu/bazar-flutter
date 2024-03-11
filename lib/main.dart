@@ -1,11 +1,9 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import 'app.dart';
 import 'util/environment/environment.dart';
-import 'util/services/api_service/api_service.dart';
 import 'util/services/app_service/app_service.dart';
-import 'util/services/storage_service/storage_service.dart';
 import 'util/services/translation_service/translation_service.dart';
 import 'util/services/user_service/user_service.dart';
 
@@ -20,11 +18,17 @@ Future<void> initialize() async {
     permanent: true,
   );
   Get.put(
-    StorageService(),
+    StorageService(
+      StorageProvider.flutterSecureStorage,
+    ),
     permanent: true,
   );
   Get.put(
-    ApiService(),
+    ApiService(
+      provider: ApiProvider.dio,
+      timeout: 5.seconds,
+      baseUrl: Environment.config.host,
+    ),
     permanent: true,
   );
   await Get.put(

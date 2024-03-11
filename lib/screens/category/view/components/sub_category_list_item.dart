@@ -1,5 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class SubCategoryListItem extends StatelessWidget {
   const SubCategoryListItem({super.key});

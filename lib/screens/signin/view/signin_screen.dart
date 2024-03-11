@@ -1,6 +1,6 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../signup/view/signup_screen.dart';
 import '../controller/signin_screen_controller.dart';

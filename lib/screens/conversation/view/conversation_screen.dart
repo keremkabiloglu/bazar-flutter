@@ -1,5 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../controller/conversation_screen_controller.dart';
 import 'components/conversation_app_bar.dart';

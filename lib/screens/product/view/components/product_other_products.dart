@@ -1,7 +1,7 @@
 import 'dart:math';
 
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:get/get.dart';
 
 import '../../../../util/comonents/product_grid_item.dart';
 import '../../../../util/model/product_state.dart';

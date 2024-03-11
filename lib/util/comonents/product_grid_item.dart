@@ -1,14 +1,13 @@
 import 'dart:math';
 
-import 'package:bazar_flutter/util/comonents/hero_dialog_route.dart';
-import 'package:bazar_flutter/util/comonents/product_focus_dialog.dart';
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 import '../model/product_state.dart';
+import 'hero_dialog_route.dart';
+import 'product_focus_dialog.dart';
 
 enum ProductGridItemSize {
   small,

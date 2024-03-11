@@ -1,6 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:get/get.dart';
 
 import 'screens/main/view/main_screen.dart';
 import 'util/routes.dart';
@@ -25,11 +24,6 @@ class App extends StatelessWidget {
         locale: Get.find<TranslationService>().currentLocale,
         fallbackLocale: Get.find<TranslationService>().currentLocale,
         supportedLocales: Get.find<TranslationService>().supportedLocales,
-        localizationsDelegates: const [
-          GlobalMaterialLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-        ],
       ),
     );
   }

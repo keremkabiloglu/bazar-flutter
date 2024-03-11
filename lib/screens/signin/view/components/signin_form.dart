@@ -1,6 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../../controller/signin_screen_controller.dart';
@@ -18,7 +17,7 @@ class SignInForm extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'EMAIL_ADDRESS'.tr,
+            'EMAIL_PHONE_OR_USERNAME'.tr,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
@@ -28,12 +27,12 @@ class SignInForm extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 10, top: 8),
             child: TextFormField(
-              controller: controller.emailController,
+              controller: controller.emailPhoneUsernameController,
               textInputAction: TextInputAction.next,
               keyboardType: TextInputType.emailAddress,
-              validator: controller.emailValidator,
+              validator: controller.emailPhoneOrUsernameValidator,
               decoration: InputDecoration(
-                hintText: 'EMAIL_ADDRESS'.tr.toLowerCase(),
+                hintText: 'EMAIL_PHONE_OR_USERNAME'.tr.toLowerCase(),
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(12),
                   child: SvgPicture.asset(
@@ -106,12 +105,12 @@ class SignInForm extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
                     'OR'.tr,
                     style: TextStyle(
                       color: Get.theme.colorScheme.primary,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 ),
@@ -134,10 +133,35 @@ class SignInForm extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 16),
-            child: SignInWithAppleButton(
-              height: 48,
-              style: SignInWithAppleButtonStyle.white,
-              text: 'SIGN_IN_WITH_GOOGLE'.tr,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                fixedSize: const Size(double.infinity, 48),
+                padding: EdgeInsets.zero,
+                backgroundColor: Colors.white,
+                shadowColor: Colors.black.withOpacity(0.1),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                  side: BorderSide.none,
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    'assets/icons/google-g.svg',
+                    width: 21,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'SIGN_IN_WITH_GOOGLE'.tr,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 21,
+                    ),
+                  ),
+                ],
+              ),
               onPressed: () {},
             ),
           ),

@@ -1,5 +1,5 @@
+import 'package:bazar_service_lib/bazar_service_lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../../util/comonents/app_switch_list_tile.dart';
 import '../../../../util/model/delivery_method.dart';

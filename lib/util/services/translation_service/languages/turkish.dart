@@ -16,8 +16,11 @@ class Turkish extends ILanguage {
 
   @override
   Map<String, String> get uiKeys => {
+        'OR': 'veya',
+        'THIS_AREA_IS_REQUIRED': 'Bu alan zorunludur.',
         'SUCCESS': 'Başarılı.',
         'EMAIL_ADDRESS': 'E-Posta Adresi',
+        'EMAIL_PHONE_OR_USERNAME': 'E-Posta, Telefon veya Kullanıcı Adı',
         'PASSWORD': 'Şifre',
         'FORGOT_MY_PASSWORD': 'şifremi Unuttum',
         'SIGNIN': 'Giriş Yap',
@@ -110,6 +113,13 @@ class Turkish extends ILanguage {
         'VERIFY': 'Doğrula',
         'I_WANT_TO_RECEIVE_UPDATES':
             'Kampanyalardan ve güncellemelerden haberdar olmak istiyorum.',
+        'INVALID_FULL_NAME': 'Geçersiz ad soyad.',
+        'INVALID_PHONE_NUMBER': 'Geçersiz telefon numarası.',
+        'IVALID_EMAIL': 'Geçersiz e-posta adresi.',
+        'INVALID_USERNAME': 'Geçersiz kullanıcı adı.',
+        'PASSWORD_SECURITY_ERROR':
+            'En az 8 karakter, en az bir büyük harf, en az bir özel karakter içermelidir.',
+        'PHONE_NUMBER_ALREADY_USED': 'Telefon numarası zaten kullanımda.',
       };
 
   @override
